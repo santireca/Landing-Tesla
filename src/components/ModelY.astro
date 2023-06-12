@@ -1,0 +1,52 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section
+    title="Model Y"
+    subtitle="Concertar una prueba de conducción"
+    color="black"
+    id="model-y"
+>
+    <div slot="footer" class="gap-x-6 flex mx-auto">
+        <a 
+            href="#" 
+            class="text-white bg-gray-700 border-[3px] border-gray-700 rounded text-sm font-medium px-12 py-2 inline-block hover:bg-gray-800 hover:border-gray-800 transition-colors">
+            Explorar inventario
+        </a>
+        <a 
+            href="#" 
+            class="text-black bg-white border-[3px] border-white rounded text-sm font-medium px-12 py-2 inline-block hover:bg-gray-10hover:border-gray-100 transition-colors">
+            Pedido personalizado
+        </a>
+    </div>
+
+    <img
+        slot="background"
+        alt="Model Y"
+        class="h-full w-full object-cover object-center bg-image"
+        src="model-y.avif"
+        id="bg-image-modely"
+    />
+</Section>
+
+<script>
+    function isEdge() {
+        if (
+        navigator.userAgent.indexOf("Edge") > -1 ||
+        navigator.userAgent.indexOf("Edg") > -1
+        ) {
+        return true;
+        } else {
+        return false;
+        }
+    }
+
+    var imageElement = document.querySelector("#bg-image-modely") as HTMLImageElement;
+
+    if (isEdge()) {
+        imageElement.src = "model-y.webp";
+    } else {
+        imageElement.src = "model-y.avif";
+    }
+</script>    

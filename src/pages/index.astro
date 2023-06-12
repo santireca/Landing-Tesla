@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LandingHeader from '../components/LandingHeader.astro'
+import HeroSection from '../components/HeroSection.astro';
+import ModelY from '../components/ModelY.astro';
+import ModelX from '../components/ModelX.astro';
+import Model3 from '../components/Model3.astro';
+import ModelS from '../components/ModelS.astro';
+import Powerwall from '../components/Powerwall.astro';
+import Accessories from '../components/Accessories.astro';
+
+---
+
+<Layout title="Tesla">
+	<LandingHeader/>
+
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
+		<div class="snap-center">
+			<HeroSection id='home'/>
+		</div>
+		<div class="snap-center">
+			<ModelS id="model-s"/>
+		</div>
+		<div class="snap-center">
+			<Model3 id="model-3"/>
+		</div>
+		<div class="snap-center">
+			<ModelX id="model-x"/>
+		</div>
+		<div class="snap-center">
+			<ModelY id="model-y"/>
+		</div>
+		<div class="snap-center">
+			<Powerwall id="powerwall"/>
+		</div>
+		<div class="snap-center">
+			<Accessories id="charge"/>
+		</div>
+	</main>
+
+</Layout>
+
